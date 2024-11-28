@@ -34,7 +34,7 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      "https://backend-mern-full.onrender.comgit/api/v1/add",
+      "https://backend-mern-full.onrender.com/api/v1/add",
       task
     );
     // console.log(response);
