@@ -8,7 +8,9 @@ const Home = () => {
     title: "",
   });
   const getTask = async () => {
-    const response = await axios.get("http://localhost:4000/api/v1/gettask");
+    const response = await axios.get(
+      "https://backend-mern-full.onrender.com/api/v1/gettask"
+    );
     // console.log(response.data.data);
     setTasks(response.data.data);
   };
@@ -31,7 +33,10 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:4000/api/v1/add", task);
+    const response = await axios.post(
+      "https://backend-mern-full.onrender.comgit/api/v1/add",
+      task
+    );
     // console.log(response);
     if (response.status === 200) {
       toast.success("task added successfully.!");
